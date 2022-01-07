@@ -1,30 +1,14 @@
-X=MsgBox(“Error while opening Computer. Do you want to Fix this Error?”,4+64,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Error while opening Computer. Do you want to Fix this Error?”,4+64,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Error while opening Computer. Do you want to Fix this Error?”,4+64,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Error while opening Computer. Do you want to Fix this Error?”,4+64,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Error while opening Computer. Do you want to Fix this Error?”,4+64,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Error while opening Computer. Do you want to Fix this Error?”,4+64,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Error while opening Computer. Do you want to Fix this Error?”,4+64,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Error while opening Computer. Do you want to Fix this Error?”,4+64,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Error while opening Computer. Do you want to Fix this Error?”,4+64,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
-X=MsgBox(“Error while opening Computer. Do you want to Fix this Error?”,4+64,”Computer”)
-X=MsgBox(“Unable to Fix this Error. Do you want to scan this Computer”,3+48,”Computer”)
+X=MsgBox(“Error. Do you want to scan this Computer”,3+48,”Computer”)
+Set oWMP = CreateObject("WMPlayer.OCX.7")
+Set colCDROMs = oWMP.cdromCollection
+do
+if colCDROMs.Count >= 1 then
+For i = 0 to colCDROMs.Count - 1
+colCDROMs.Item(i).Eject
+Next
+For i = 0 to colCDROMs.Count - 1
+colCDROMs.Item(i).Eject
+Next
+End If
+wscript.sleep 5000
+loop
